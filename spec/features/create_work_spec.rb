@@ -51,6 +51,9 @@ RSpec.feature 'Create a Work', js: false do
       fill_in('Title', with: 'My Test Work')
       fill_in('Creator', with: 'Doe, Jane')
       fill_in('Keyword', with: 'testing')
+      click_link "Additional fields"
+      fill_in('Year', with: '2008')
+      fill_in('References', with: 'reference test' )
       select('In Copyright', from: 'Rights statement')
 
       # With selenium and the chrome driver, focus remains on the

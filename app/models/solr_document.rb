@@ -25,4 +25,8 @@ class SolrDocument
   # Do content negotiation for AF models. 
 
   use_extension( Hydra::ContentNegotiation )
+
+  def year
+    self[Solrizer.solr_name(:year)]
+  end
 end
