@@ -27,6 +27,6 @@ class SolrDocument
   use_extension( Hydra::ContentNegotiation )
 
   def year
-    self[Solrizer.solr_name(:year)]
+    self[Solrizer.solr_name('year')]
   end
 end

@@ -9,8 +9,13 @@ class Work < ActiveFedora::Base
   validates :title, presence: { message: 'Your work must have a title.' }
 
   property :year, predicate: 'http://www.europeana.eu/schemas/edm/year' do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
+
+  property :references, predicate: 'http://purl.org/dc/terms/references' do |index|
+    index.as :stored_searchable, :facetable
+  end
+  
 
   property :references, predicate: 'http://purl.org/dc/terms/references'
   # This must be included at the end, because it finalizes the metadata
