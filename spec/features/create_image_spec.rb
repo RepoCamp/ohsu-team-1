@@ -44,6 +44,8 @@ RSpec.feature 'Create a Image', js: false do
       fill_in('Title', with: 'My Test Work')
       fill_in('Creator', with: 'Doe, Jane')
       fill_in('Keyword', with: 'testing')
+      click_link "Additional fields"
+      fill_in('Photographer', with: 'Adams, Ansel')
       select('In Copyright', from: 'Rights statement')
 
       # With selenium and the chrome driver, focus remains on the
