@@ -7,7 +7,7 @@ include Warden::Test::Helpers
 RSpec.feature 'Create a Image', js: false do
   context 'a logged in user' do
     let(:user_attributes) do
-      { email: 'test@example.com' }
+      { email: 'test@.com' }
     end
     let(:user) do
       User.new(user_attributes) { |u| u.save(validate: false) }
@@ -39,6 +39,8 @@ RSpec.feature 'Create a Image', js: false do
       # choose "payload_concern", option: "Image"
       # click_button "Create work"
 
+      choose "payload_concern", option: "Image"
+      click_button "Create work"
       expect(page).to have_content "Add New Image"
       click_link "Files" # switch tab
       expect(page).to have_content "Add files"
