@@ -1,13 +1,13 @@
 # Generated via
-#  `rails generate hyrax:work Work`
+#  `rails generate hyrax:work Image`
 require 'rails_helper'
 include Warden::Test::Helpers
 
 # NOTE: If you generated more than one work, you have to set "js: true"
-RSpec.feature 'Create a Work', js: false do
+RSpec.feature 'Create a Image', js: false do
   context 'a logged in user' do
     let(:user_attributes) do
-      { email: 'test@example.com' }
+      { email: 'test@.com' }
     end
     let(:user) do
       User.new(user_attributes) { |u| u.save(validate: false) }
@@ -31,8 +31,8 @@ RSpec.feature 'Create a Work', js: false do
     end
 
     scenario do
-      visit '/concern/works/new'
-      expect(page).to have_content "Add New Work"
+      visit '/concern/images/new'
+      expect(page).to have_content "Add New Image"
       click_link "Files" # switch tab
       expect(page).to have_content "Add files"
       expect(page).to have_content "Add folder"
@@ -44,16 +44,13 @@ RSpec.feature 'Create a Work', js: false do
       fill_in('Title', with: 'My Test Work')
       fill_in('Creator', with: 'Doe, Jane')
       fill_in('Keyword', with: 'testing')
-      click_link "Additional fields"
-      fill_in('Year', with: '2008')
-      fill_in('References', with: 'reference test' )
       select('In Copyright', from: 'Rights statement')
 
       # With selenium and the chrome driver, focus remains on the
       # select box. Click outside the box so the next line can't find
       # its element
       find('body').click
-      choose('work_visibility_open')
+      choose('image_visibility_open')
       expect(page).to have_content('Please note, making something visible to the world (i.e. marking this as Public) may be viewed as publishing which could impact your ability to')
       check('agreement')
 
