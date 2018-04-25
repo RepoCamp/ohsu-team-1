@@ -3,26 +3,14 @@
 The Locals is focusing on a photographer's IR.  
 
 
+Things we're adding:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Image Work-type
 
-Things you may want to cover:
+* New resource-type 
 
-* Ruby version
+* Photographer focused metadata (photographer, film type)
 
-* System dependencies
+* Update Image viewer
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Portland-centric Local UI (logo, banner, portland images)
