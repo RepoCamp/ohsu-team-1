@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.org/RepoCamp/ohsu-team-1.svg?branch=master)](https://travis-ci.org/RepoCamp/ohsu-team-1)
+
 The Locals is focusing on a photographer's IR.  
 
 
