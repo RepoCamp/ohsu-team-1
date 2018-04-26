@@ -9,7 +9,7 @@ Things we're adding:
 
 * New resource-type 
 
-* Photographer focused metadata (photographer, film type)
+* Photographer focused metadata (photographer)
 
 * Update Image viewer
 
