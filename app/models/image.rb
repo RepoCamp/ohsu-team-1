@@ -8,7 +8,7 @@ class Image < ActiveFedora::Base
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }
   property :photographer, predicate: "http://id.loc.gov/vocabulary/relators/pht" do |index|
-    index.as :stored_searchable
+    index.as :stored_searchable, :facetable
   end
   
   # This must be included at the end, because it finalizes the metadata

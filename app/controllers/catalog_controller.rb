@@ -54,6 +54,7 @@ class CatalogController < ApplicationController
     config.add_facet_field solr_name('member_of_collections', :symbol), limit: 5, label: 'Collections'
     config.add_facet_field solr_name("year", :facetable), label: "Year", limit: 5
     config.add_facet_field solr_name("references", :facetable), label: "Reference", limit: 5
+    config.add_facet_field solr_name("photographer", :facetable), label: "Photographer", limit: 5
 
     # The generic_type isn't displayed on the facet list
     # It's used to give a label to the filter that comes from the user profile
@@ -89,6 +90,7 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name("lease_expiration_date", :stored_sortable, type: :date), label: "Lease expiration date", helper_method: :human_readable_date
     config.add_index_field solr_name("year", :stored_searchable), label: "Year"
     config.add_index_field solr_name("references", :stored_searchable), label: "Reference"
+    config.add_index_field solr_name("photographer", :stored_searchable), label: "Photographer"
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
