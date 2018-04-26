@@ -29,4 +29,8 @@ class SolrDocument
   def year
     self[Solrizer.solr_name('year')]
   end
+
+  def photographer
+    self[Solrizer.solr_name('photographer')]
+  end
 end
